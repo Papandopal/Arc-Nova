@@ -1498,6 +1498,20 @@ void gameScene::ProjestAction(int buttonNumber) {
       emit HideAssociations();
     }
   }
+
+if (howManyPersonsFree != 3 and howManyPersonsFree != 2) {
+    return;
+  }
+
+  if (howManyPersonsFree == 3) {
+    treePerson->setPos(1910, -470);
+    howManyPersonsFree--;
+  } else {
+    firstPerson->setPos(1905, -470);
+    secondPerson->setPos(1915, -470);
+    howManyPersonsFree = 0;
+  }
+  
 }
 
 int gameScene::HowManyProjects() { return howManyActiveProjects; }
